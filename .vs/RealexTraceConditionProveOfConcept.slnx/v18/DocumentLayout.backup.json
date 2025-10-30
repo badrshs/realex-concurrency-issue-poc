@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\badr.aldeen\\source\\repos\\RealexTraceConditionProveOfConcept\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C7B648A3-7E6F-4675-A180-D33E5B61F630}|RealexTraceConditionProveOfConcept\\RealexTraceConditionProveOfConcept.csproj|c:\\users\\badr.aldeen\\source\\repos\\realextraceconditionproveofconcept\\realextraceconditionproveofconcept\\controllers\\realexraceconditiondebugcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7B648A3-7E6F-4675-A180-D33E5B61F630}|RealexTraceConditionProveOfConcept\\RealexTraceConditionProveOfConcept.csproj|solutionrelative:realextraceconditionproveofconcept\\controllers\\realexraceconditiondebugcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7B648A3-7E6F-4675-A180-D33E5B61F630}|RealexTraceConditionProveOfConcept\\RealexTraceConditionProveOfConcept.csproj|c:\\users\\badr.aldeen\\source\\repos\\realextraceconditionproveofconcept\\realextraceconditionproveofconcept\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7B648A3-7E6F-4675-A180-D33E5B61F630}|RealexTraceConditionProveOfConcept\\RealexTraceConditionProveOfConcept.csproj|solutionrelative:realextraceconditionproveofconcept\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7B648A3-7E6F-4675-A180-D33E5B61F630}|RealexTraceConditionProveOfConcept\\RealexTraceConditionProveOfConcept.csproj|c:\\users\\badr.aldeen\\source\\repos\\realextraceconditionproveofconcept\\realextraceconditionproveofconcept\\views\\realexraceconditiondebug\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C7B648A3-7E6F-4675-A180-D33E5B61F630}|RealexTraceConditionProveOfConcept\\RealexTraceConditionProveOfConcept.csproj|solutionrelative:realextraceconditionproveofconcept\\views\\realexraceconditiondebug\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\badr.aldeen\\source\\repos\\RealexTraceConditionProveOfConcept\\RealexTraceConditionProveOfConcept\\Views\\RealexRaceConditionDebug\\Index.cshtml",
+              "RelativeDocumentMoniker": "RealexTraceConditionProveOfConcept\\Views\\RealexRaceConditionDebug\\Index.cshtml",
+              "ToolTip": "C:\\Users\\badr.aldeen\\source\\repos\\RealexTraceConditionProveOfConcept\\RealexTraceConditionProveOfConcept\\Views\\RealexRaceConditionDebug\\Index.cshtml",
+              "RelativeToolTip": "RealexTraceConditionProveOfConcept\\Views\\RealexRaceConditionDebug\\Index.cshtml",
+              "ViewState": "AgIAAOkAAAAAAAAAAAAswAYBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-30T13:30:58.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\badr.aldeen\\source\\repos\\RealexTraceConditionProveOfConcept\\RealexTraceConditionProveOfConcept\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "RealexTraceConditionProveOfConcept\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\badr.aldeen\\source\\repos\\RealexTraceConditionProveOfConcept\\RealexTraceConditionProveOfConcept\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "RealexTraceConditionProveOfConcept\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T13:27:35.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RealexRaceConditionDebugController.cs",
+              "DocumentMoniker": "C:\\Users\\badr.aldeen\\source\\repos\\RealexTraceConditionProveOfConcept\\RealexTraceConditionProveOfConcept\\Controllers\\RealexRaceConditionDebugController.cs",
+              "RelativeDocumentMoniker": "RealexTraceConditionProveOfConcept\\Controllers\\RealexRaceConditionDebugController.cs",
+              "ToolTip": "C:\\Users\\badr.aldeen\\source\\repos\\RealexTraceConditionProveOfConcept\\RealexTraceConditionProveOfConcept\\Controllers\\RealexRaceConditionDebugController.cs",
+              "RelativeToolTip": "RealexTraceConditionProveOfConcept\\Controllers\\RealexRaceConditionDebugController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwDQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T13:26:24.286Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
