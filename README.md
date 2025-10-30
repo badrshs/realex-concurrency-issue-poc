@@ -2,9 +2,11 @@
 
 [Download the video](https://github.com/badrshs/realex-concurrency-issue-poc/raw/refs/heads/main/video-record.mp4)
 
-
 ![chrome_p7uITDGFHn](https://github.com/user-attachments/assets/7530cc75-b8c4-444e-be05-1713c8b20c27)
 
+## Suggestions
+Please use **Firefox Mozilla** or  use Chrome but with the debug tools open.
+We are able to reproduce this on every click that has two simulated requests. If you are not able to reproduce it, try a larger number.
 
 ## 🎯 Purpose
 This is a **standalone, copy-paste ready** test to reproduce and prove a race condition bug in the Realex/Global Payments SDK. When multiple concurrent requests are made with different `AccountId` values, the SDK sometimes returns the wrong account configuration in the serialized JSON response.
