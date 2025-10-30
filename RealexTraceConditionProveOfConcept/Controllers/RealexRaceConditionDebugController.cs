@@ -1,4 +1,4 @@
-﻿using GlobalPayments.Api;
+using GlobalPayments.Api;
 using GlobalPayments.Api.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -162,33 +162,47 @@ namespace RealexTraceConditionProveOfConcept.Controllers
                 if (string.IsNullOrEmpty(serializedJson))
                     return "NULL_OR_EMPTY";
 
-                // Realex returns base64 encoded JSON
-                var jsonDoc = GlobalPayments.Api.Utils.JsonDoc.Parse(
-                    serializedJson,
-                    GlobalPayments.Api.Utils.JsonEncoders.Base64Encoder);
+                _logger.LogDebug($"[RACE TEST] Attempting to parse {fieldName} from JSON: {serializedJson.Substring(0, Math.Min(100, serializedJson.Length))}...");
 
-                string fieldValue = jsonDoc.GetValue<string>(fieldName);
+                // First try: Plain JSON using Realex JsonDoc parser
+                try
+                {
+                    var jsonDoc = GlobalPayments.Api.Utils.JsonDoc.Parse(serializedJson);
+                    string fieldValue = jsonDoc.GetValue<string>(fieldName);
+                    _logger.LogDebug($"[RACE TEST] Successfully parsed {fieldName} from Realex JsonDoc: {fieldValue}");
+                    return fieldValue ?? "NOT_FOUND_IN_JSON";
+                }
+                catch (Exception realexJsonEx)
+                {
+                    _logger.LogDebug($"[RACE TEST] Realex JsonDoc parsing failed for {fieldName}: {realexJsonEx.Message}");
 
-                return fieldValue ?? "NOT_FOUND_IN_JSON";
+                    // Second try: System.Text.Json as fallback
+                    try
+                    {
+                        using var document = JsonDocument.Parse(serializedJson);
+                        if (document.RootElement.TryGetProperty(fieldName, out JsonElement element))
+                        {
+                            string value = element.GetString() ?? "NULL_VALUE";
+                            _logger.LogDebug($"[RACE TEST] Successfully parsed {fieldName} from System.Text.Json: {value}");
+                            return value;
+                        }
+                        else
+                        {
+                            _logger.LogDebug($"[RACE TEST] Field {fieldName} not found in System.Text.Json");
+                            return "NOT_FOUND_IN_JSON";
+                        }
+                    }
+                    catch (Exception systemJsonEx)
+                    {
+                        _logger.LogError($"[RACE TEST] Both JSON parsing methods failed for {fieldName}. Realex: {realexJsonEx.Message}, System: {systemJsonEx.Message}");
+                        return $"PARSE_ERROR: Both methods failed";
+                    }
+                }
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"[RACE TEST] Failed to parse {fieldName}");
-
-                // Fallback: try plain JSON
-                try
-                {
-                    using var document = JsonDocument.Parse(serializedJson);
-                    if (document.RootElement.TryGetProperty(fieldName, out JsonElement element))
-                    {
-                        return element.GetString() ?? "NULL_VALUE";
-                    }
-                }
-                catch
-                {
-                }
-
-                return $"PARSE_ERROR: {ex.Message}";
+                _logger.LogError(ex, $"[RACE TEST] Unexpected error parsing {fieldName}");
+                return $"UNEXPECTED_ERROR: {ex.Message}";
             }
         }
     }
