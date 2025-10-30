@@ -5,7 +5,7 @@
 ![chrome_p7uITDGFHn](https://github.com/user-attachments/assets/7530cc75-b8c4-444e-be05-1713c8b20c27)
 
 ## Suggestions
-Please use **Firefox Mozilla** or  use Chrome but with the debug tools open.
+Please use **Firefox Mozilla** to test this or use Chrome with the debug tools open.
 We are able to reproduce this on every click that has two simulated requests. If you are not able to reproduce it, try a larger number.
 
 ## 🎯 Purpose
